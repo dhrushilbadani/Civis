@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300);
+form {
+    background: #ffffff;
+    opacity: 0.9;
+    margin-top: 50px;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: orange;
+}
+
+h2 {
+    padding-left: 20px;
+    font-family: 'HelveticaNeue-UltraLight';
+}
+
+.form-group   {
+  font-family: 'HelveticaNeue-UltraLight';
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+.form-group label   {
+  font-family: 'HelveticaNeue-UltraLight';
+  font-size:18px;
+}
+
+button {
+    padding-bottom: 10px;
+    display: block;
+    width: 100%;
+    padding-left:-20px;
+}

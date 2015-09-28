@@ -1,0 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+body  {
+    font-family: 'HelveticaNeue-UltraLight';
+    background-color: black;
+}
+
+.mainbod {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(http://photo.sf.co.ua/g/95/2.jpg);
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'HelveticaNeue-UltraLight';
+    font-size: 7em;
+    text-align: center;
+    padding: 15px;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 300px; /*slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+/*add some makeup*/
+.carousel .carousel-control {
+    background: none;
+    border: none;
+    top: 50%;
+}
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.polls  {
+  padding-top:50px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+.poll   {
+  width:25%;
+  margin-left:20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
