@@ -9,7 +9,7 @@ form {
     border-color: orange;
 }
 
-h2 {
+form h2 {
     padding-left: 20px;
     font-family: 'HelveticaNeue-UltraLight';
 }

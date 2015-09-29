@@ -9,17 +9,17 @@ Meteor.startup(function() {
       {
         question: 'Is #DigitalIndia worth the hype?',
         choices: [
-          { text: 'Of course!', votes: 0 },
-          { text: 'Eh', votes: 0 },
-          { text: 'No. Fail!', votes: 0 }
+          { text: 'Of course!', votes: 21 },
+          { text: 'Eh', votes: 9 },
+          { text: 'No. Fail!', votes: 5 }
         ]
       },
       {
         question: 'Should Somnath Bharti be expelled from the AAP?',
         choices: [
-          { text: 'Yes, surely', votes: 0 },
-          { text: 'Wait for the court verdict', votes: 0 },
-          { text: 'No', votes: 0 }
+          { text: 'Yes, surely', votes: 15 },
+          { text: 'Wait for the court verdict', votes: 12 },
+          { text: 'No', votes: 2 }
         ]
       }
     ];

@@ -27,7 +27,7 @@ Template.poll.events({
     );
 
     $(event.currentTarget).parent().fadeTo('slow', 0.5);
-    Session.set()
+    $(event.currentTarget).parent().prop('disabled', true);
     localStorage['votedForPost' + pollID] = 'true';
   }
 
@@ -36,22 +36,78 @@ Template.poll.events({
 Template.poll.rendered = function () {
     // create the chart
     var currid = Template.currentData()._id;
-    $('.highcontainer'+Template.currentData()._id).highcharts({
-        chart: {
-            events: {
-                click: function(event) {
-                    alert ('x: '+ event.xAxis[0].value +', y: '+
-                          event.yAxis[0].value);
+    var choicesArr = Template.currentData().choices;
+    var max0 = false, max1 = false, max2 = false;
+    var choice0 = choicesArr[0];
+    var name0 = choice0.text;
+    var votes0 = choice0.votes;
+    var choice1 = choicesArr[1];
+    var name1 = choice1.text;
+    var votes1 = choice1.votes;
+    var choice2 = choicesArr[2];
+    var name2 = choice2.text;
+    var votes2 = choice2.votes;
+    if (Math.max(votes0, votes1, votes2) == votes0) {
+        max0 = true;
+    } else if (Math.max(votes0, votes1, votes2) == votes1) {
+        max1 = true;
+    } else {
+        max2 = true;
+    }
+    if (votes0 != 0 || votes1 != 0 || votes2 != 0) {
+        $('.highcontainer'+Template.currentData()._id).highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                marginTop:2,
+                marginBottom: 0,
+                marginLeft: 50,
+                marginRight: 50,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: null
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    size:'100%',
+                    slicedOffset: 10,
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        distance: 2,
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
                 }
-            }
-        },
-        xAxis: {
-        },
+            },
+            series: [{
+                name: "% Votes",
+                colorByPoint: true,
+                data: [{
+                    name: name0,
+                    y: votes0,
+                    sliced: max0,
+                }, {
+                    name: name1,
+                    y: votes1,
+                    sliced: max1
+                }, {
+                    name: name2,
+                    y: votes2,
+                    sliced: max2
+                }]
+            }]
+        });
+    }
 
-        series: [{
-            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-        }]
-    });
     if(localStorage['votedForPost' + currid] == 'true') {
         $('.polls').find('[data-id='+currid+']').fadeTo('fast', 0.65);
     }
