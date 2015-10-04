@@ -1,7 +1,8 @@
-<template name="poll">
+<template name="scrapedpoll">
 
-<div class="poll well well-lg" data-id="{{ _id }}">
-
+<div class="scrapedpoll well well-lg" data-id="{{ _id }}">
+    <h4> <span style="color:red">{{channel}}</span></h4>
+    <HR COLOR="black" width:90%>
     <h3>{{ question }}</h3>
 
     {{ #each indexedArray choices }}
@@ -11,6 +12,6 @@
             <span class="text">{{ text }}</span>
         </a>
     {{ /each }}
-    <div class="highcontainer{{_id}}" style="height: 300px"></div>
+    <div class="scrapedhighcontainer{{_id}}" style="height: 300px"></div>
 </div>
 </template>

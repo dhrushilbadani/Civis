@@ -9,6 +9,7 @@ Template.pollForm.events({
     // get the data we need from the form
     var newPoll = {
       question: event.target.question.value,
+      totalvotes: 0,
       choices: [
         {  text: event.target.choice1.value, votes: 0 },
         {  text: event.target.choice2.value, votes: 0 },

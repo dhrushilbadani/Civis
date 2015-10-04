@@ -1,9 +1,16 @@
 Template.body.helpers({
 
   polls: function() {
-    return Polls.find();
-  }
+    return Polls.find().fetch().reverse();
+  },
 
+  pbyvotes: function() {
+    return Polls.find({}, {sort: {totalvotes: -1}});
+  },
+
+  scrapedpolls: function() {
+    return ScrapedPolls.find().fetch().reverse();
+  }
 });
 
 // adds index to each item

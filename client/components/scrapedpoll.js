@@ -1,5 +1,5 @@
 // attach events to our poll template
-Template.poll.events({
+Template.scrapedpoll.events({
 
   // event to handle clicking a choice
   'click .vote': function(event) {
@@ -8,7 +8,7 @@ Template.poll.events({
     event.preventDefault();
 
     // get the parent (poll) id
-    var pollID = $(event.currentTarget).parent('.poll').data('id');
+    var pollID = $(event.currentTarget).parent('.scrapedpoll').data('id');
     var voteID = $(event.currentTarget).data('id');
 
     if(localStorage['votedForPost' + pollID] == 'true') {
@@ -22,21 +22,20 @@ Template.poll.events({
     action['totalvotes'] = 1;
 
     // increment the number of votes for this choice
-    Polls.update(
+    ScrapedPolls.update(
       { _id: pollID },
       { $inc: action }
     );
     console.log("Clicked "+$(event.currentTarget).parent());
     $(event.currentTarget).parent().fadeTo('slow', 0.65);
-    $('.polls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
-    $('.tpolls').find('[data-id='+pollID+']').fadeTo('fast', 0.65);
+    $('.scrapedpolls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
     $(event.currentTarget).parent().prop('disabled', true);
     localStorage['votedForPost' + pollID] = 'true';
   }
 
 });
 
-Template.poll.rendered = function () {
+Template.scrapedpoll.rendered = function () {
     // create the chart
     var currid = Template.currentData()._id;
     console.log("Rendering ", currid);
@@ -59,7 +58,7 @@ Template.poll.rendered = function () {
         max2 = true;
     }
     if (votes0 != 0 || votes1 != 0 || votes2 != 0) {
-        $('.highcontainer'+Template.currentData()._id).each(function(i,e) {
+        $('.scrapedhighcontainer'+Template.currentData()._id).each(function(i,e) {
             console.log("Graphing ", currid);
             $(e).highcharts({
             chart: {
@@ -116,8 +115,7 @@ Template.poll.rendered = function () {
 }
 
     if(localStorage['votedForPost' + currid] == 'true') {
-        $('.polls').find('[data-id='+currid+']').fadeTo('fast', 0.65);
-        $('.tpolls').find('[data-id='+currid+']').fadeTo('fast', 0.65);
+        $('.scrapedpolls').find('[data-id='+currid+']').fadeTo('fast', 0.65);
     }
 };
 

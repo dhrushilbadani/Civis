@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300);
 form {
-    background: #ffffff;
+    background-image: url("http://www.publicdomainpictures.net/download-picture.php?adresar=20000&soubor=rough-beige-paper-texture.jpg");
     opacity: 0.9;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding-top: 10px;
     border-style: solid;
-    border-width: 4px;
+    border-width: 3px;
     border-color: orange;
 }
 

@@ -19,3 +19,12 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
+
+natestrauser:animate-css
+http
+underscore
+meteorhacks:npm
+percolate:synced-cron
+
+
+npm-container

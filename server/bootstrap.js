@@ -8,6 +8,7 @@ Meteor.startup(function() {
     var samplePolls = [
       {
         question: 'Is #DigitalIndia worth the hype?',
+        totalvotes: 35,
         choices: [
           { text: 'Of course!', votes: 21 },
           { text: 'Eh', votes: 9 },
@@ -16,8 +17,9 @@ Meteor.startup(function() {
       },
       {
         question: 'Should Somnath Bharti be expelled from the AAP?',
+        totalvotes: 39,
         choices: [
-          { text: 'Yes, surely', votes: 15 },
+          { text: 'Yes, surely', votes: 25 },
           { text: 'Wait for the court verdict', votes: 12 },
           { text: 'No', votes: 2 }
         ]

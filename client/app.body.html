@@ -3,11 +3,13 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <h1> <span style="color:orange"> Ci</span><span style="color:white">v</span><span style="color:green">is</span></h1>
     <ul class="nav navbar-nav">
-      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#ask">> Ask</a></li>
+      <li><a href="#latest">> Latest</a></li>
+      <li><a href="#fromTheNews">> From The News</a></li>
+      <li><a href="#trending">> Trending</a></li>
     </ul>
   </nav>
 
-  <h2> <span style="color:white"> About </span> </h2>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -51,20 +53,52 @@
 
  <div class="mainbod" data-sr>
    <!-- PULL IN THE POLL CREATION FORM -->
-   <div class="container">
-     <div class="row">
-       <div class="col-md-6 col-md-offset-3">
-         {{ >pollForm }}
+   <div id="ask">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6 col-md-offset-3">
+           {{ >pollForm }}
+         </div>
        </div>
      </div>
    </div>
 
-   <!-- LOOP OVER POLLS AND SHOW EACH -->
-   <div class="polls" data-sr>
-       {{ #each polls }}
-           {{ >poll }}
-       {{ /each }}
-   </div>
- </div>
 
+   <div id="latest">
+     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Latest Polls </span></h2>
+     <HR COLOR="white" width:60%>
+      <h3> <span style="color:white; padding-top:60px; padding-left:80px">The latest polls from other Cives (i.e. citizens, for the uninitiated), just like you.</span></h3>
+     <!-- LOOP OVER POLLS AND SHOW EACH -->
+     <div class="polls" data-sr>
+         {{ #each polls }}
+             {{ >poll }}
+         {{ /each }}
+     </div>
+   </div>
+
+    <div id="fromTheNews">
+     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> From The News </span></h2>
+     <HR COLOR="white" width:60%>
+      <h3> <span style="color:white; padding-top:60px; padding-left:80px">Their polls, your opinion.</span></h3>
+     <!-- LOOP OVER POLLS AND SHOW EACH -->
+     <div class="scrapedpolls" data-sr>
+         {{ #each scrapedpolls }}
+             {{ >scrapedpoll }}
+         {{ /each }}
+     </div>
+   </div>
+
+   <div id="trending">
+     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Trending Polls </span></h2>
+     <HR COLOR="white" width:60%>
+      <h3> <span style="color:white; padding-top:60px; padding-left:80px">See what "the nation (really) wants to know." (Reminds me of a certain someone..)</span></h3>
+     <!-- LOOP OVER POLLS AND SHOW EACH -->
+     <div class="tpolls" data-sr>
+         {{ #each pbyvotes }}
+             {{ >poll }}
+         {{ /each }}
+     </div>
+   </div>
+
+ </div>
 </body>

@@ -1,27 +1,57 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
 
 body  {
-    padding-top: 110px;
+    padding-top: 170px;
     font-family: 'HelveticaNeue-UltraLight';
     background-color: black;
-}
-
-.mainbod {
-    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(http://photo.sf.co.ua/g/95/2.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(http://photo.sf.co.ua/g/95/2.jpg);
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.navbar li {
+  font-family: 'HelveticaNeue-UltraLight';
+  padding-left: 30px;
+  font-size: 1.2em;
+  color: orange;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 4px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.navbar {
+  height:150px;
+  /*padding-bottom: 20px;*/
+}
+
+.mainbod {
+
+    -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform-style: flat;
+    transition: 0s ease;
+    transition-property: background-position;
+    transform-style: preserve-3d;
 }
 
 h1 {
     font-family: 'HelveticaNeue-UltraLight';
     font-size: 5em;
     text-align: center;
-    padding: 15px;
+    padding: 0px;
+    letter-spacing: 2px;
 }
 
 h2 {
-
     padding-left: 40px;
     font-size: 3em;
     font-family: 'HelveticaNeue-UltraLight';
@@ -49,13 +79,40 @@ h2 {
     }
 }
 
+hr {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
 .polls  {
-  padding-top:50px;
+  padding-top:20px;
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
 }
+
+.tpolls  {
+  padding-top:20px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+
 .poll   {
+  width:25%;
+  margin-left:20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.scrapedpolls  {
+  padding-top:20px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+
+.scrapedpoll   {
   width:25%;
   margin-left:20px;
   margin-right: 20px;
