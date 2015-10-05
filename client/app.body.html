@@ -3,10 +3,10 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <h1> <span style="color:orange"> Ci</span><span style="color:white">v</span><span style="color:green">is</span></h1>
     <ul class="nav navbar-nav">
-      <li><a href="#ask">> Ask</a></li>
-      <li><a href="#latest">> Latest</a></li>
-      <li><a href="#fromTheNews">> From The News</a></li>
-      <li><a href="#trending">> Trending</a></li>
+      <li class="hvr-grow"><a href="#ask">> Ask</a></li>
+      <li class="hvr-grow"><a href="#latest">> Latest</a></li>
+      <li class="hvr-grow"><a href="#fromTheNews">> From The News</a></li>
+      <li class="hvr-grow"><a href="#trending">> Trending</a></li>
     </ul>
   </nav>
 
@@ -70,9 +70,9 @@
       <h3> <span style="color:white; padding-top:60px; padding-left:80px">The latest polls from other Cives (i.e. citizens, for the uninitiated), just like you.</span></h3>
      <!-- LOOP OVER POLLS AND SHOW EACH -->
      <div class="polls" data-sr>
-         {{ #each polls }}
-             {{ >poll }}
-         {{ /each }}
+        {{ #each polls }}
+            {{ >poll }}
+        {{ /each }}
      </div>
    </div>
 

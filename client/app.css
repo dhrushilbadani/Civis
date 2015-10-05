@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
 
 body  {
-    padding-top: 170px;
+    padding-top: 150px;
     font-family: 'HelveticaNeue-UltraLight';
     background-color: black;
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(http://photo.sf.co.ua/g/95/2.jpg);
@@ -15,7 +15,7 @@ body  {
 .navbar li {
   font-family: 'HelveticaNeue-UltraLight';
   padding-left: 30px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: orange;
 }
 
@@ -85,14 +85,14 @@ hr {
 }
 
 .polls  {
-  padding-top:20px;
+  /*padding-top:20px;*/
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
 }
 
 .tpolls  {
-  padding-top:20px;
+  /*padding-top:20px;*/
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
@@ -106,7 +106,7 @@ hr {
 }
 
 .scrapedpolls  {
-  padding-top:20px;
+  /*padding-top:20px;*/
   display:flex;
   flex-flow:row wrap;
   justify-content:center;

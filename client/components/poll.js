@@ -28,6 +28,9 @@ Template.poll.events({
     );
     console.log("Clicked "+$(event.currentTarget).parent());
     $(event.currentTarget).parent().fadeTo('slow', 0.65);
+    if ($(event.currentTarget).hasClass("hvr-grow")) {
+        $(event.currentTarget).toggleClass("hvr-grow");
+    }
     $('.polls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
     $('.tpolls').find('[data-id='+pollID+']').fadeTo('fast', 0.65);
     $(event.currentTarget).parent().prop('disabled', true);
