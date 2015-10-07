@@ -11,17 +11,17 @@ form {
 
 form h2 {
     padding-left: 20px;
-    font-family: 'HelveticaNeue-UltraLight';
+    font-family: 'Abel';
 }
 
 .form-group   {
-  font-family: 'HelveticaNeue-UltraLight';
+  font-family: 'Abel';
   padding-left: 30px;
   padding-right: 20px;
   padding-top: 15px;
 }
 .form-group label   {
-  font-family: 'HelveticaNeue-UltraLight';
+  font-family: 'Abel';
   font-size:18px;
 }
 

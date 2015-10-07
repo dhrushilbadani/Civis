@@ -1,0 +1,8 @@
+<template name="searchBox">
+    {{> esInput index="polls" placeholder="Search..." }}
+    <ul>
+        {{#esEach index="polls"}}
+            <li>Name of the question: {{question}}</li>
+        {{/esEach}}
+    </ul>
+</template>

@@ -28,8 +28,12 @@ Template.scrapedpoll.events({
     );
     console.log("Clicked "+$(event.currentTarget).parent());
     $(event.currentTarget).parent().fadeTo('slow', 0.65);
+    /*if ($(event.currentTarget).hasClass("hvr-grow")) {
+        $(event.currentTarget).toggleClass("hvr-grow");
+    }*/
     $('.scrapedpolls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
     $(event.currentTarget).parent().prop('disabled', true);
+    $(event.currentTarget).siblings('.vote').removeClass("hvr-grow");
     localStorage['votedForPost' + pollID] = 'true';
   }
 
@@ -84,7 +88,7 @@ Template.scrapedpoll.rendered = function () {
                     allowPointSelect: true,
                     cursor: 'pointer',
                     dataLabels: {
-                        distance: 2,
+                        distance: 0,
                         enabled: true,
                         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                         style: {

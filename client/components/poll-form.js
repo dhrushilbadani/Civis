@@ -5,10 +5,10 @@ Template.pollForm.events({
 
     // stop the form from submitting
     event.preventDefault();
-
     // get the data we need from the form
     var newPoll = {
       question: event.target.question.value,
+      tags: event.target.tags.value,
       totalvotes: 0,
       choices: [
         {  text: event.target.choice1.value, votes: 0 },
@@ -19,6 +19,7 @@ Template.pollForm.events({
 
     // create the new poll
     Polls.insert(newPoll);
+    $('.add-post-form')[0].reset();
   }
 
 });

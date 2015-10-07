@@ -1,58 +1,20 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
-    <h1> <span style="color:orange"> Ci</span><span style="color:white">v</span><span style="color:green">is</span></h1>
-    <ul class="nav navbar-nav">
+    <p> <span style="color:orange"> CI</span><span style="color:white">V</span><span style="color:green">IS</span></p>
+    <ul class="nav navbar-nav pull-right">
       <li class="hvr-grow"><a href="#ask">> Ask</a></li>
       <li class="hvr-grow"><a href="#latest">> Latest</a></li>
       <li class="hvr-grow"><a href="#fromTheNews">> From The News</a></li>
       <li class="hvr-grow"><a href="#trending">> Trending</a></li>
     </ul>
-  </nav>
-
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="http://www.ocfightdoc.com/wp-content/uploads/2011/12/NEW-MEDIA1.jpg" alt="...">
-        <div class="carousel-caption">
-            <h3>Caption Text</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="http://placehold.it/1200x300" alt="...">
-        <div class="carousel-caption">
-            <h3>Caption Text</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="http://placehold.it/1200x300" alt="...">
-        <div class="carousel-caption">
-            <h3>Caption Text</h3>
-        </div>
-      </div>
+    <div class="pull-right">
+      <!--{{>searchBox}} -->
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </div> <!-- Carousel -->
-
+  </nav>
 
 
  <div class="mainbod" data-sr>
-   <!-- PULL IN THE POLL CREATION FORM -->
    <div id="ask">
      <div class="container">
        <div class="row">
@@ -67,8 +29,7 @@
    <div id="latest">
      <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Latest Polls </span></h2>
      <HR COLOR="white" width:60%>
-      <h3> <span style="color:white; padding-top:60px; padding-left:80px">The latest polls from other Cives (i.e. citizens, for the uninitiated), just like you.</span></h3>
-     <!-- LOOP OVER POLLS AND SHOW EACH -->
+      <h3> <span style="color:white; padding-top:60px; padding-left:80px">The latest polls from your fellow Cives (i.e. citizens, for the uninitiated).</span></h3>
      <div class="polls" data-sr>
         {{ #each polls }}
             {{ >poll }}
@@ -80,7 +41,6 @@
      <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> From The News </span></h2>
      <HR COLOR="white" width:60%>
       <h3> <span style="color:white; padding-top:60px; padding-left:80px">Their polls, your opinion.</span></h3>
-     <!-- LOOP OVER POLLS AND SHOW EACH -->
      <div class="scrapedpolls" data-sr>
          {{ #each scrapedpolls }}
              {{ >scrapedpoll }}
@@ -91,8 +51,7 @@
    <div id="trending">
      <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Trending Polls </span></h2>
      <HR COLOR="white" width:60%>
-      <h3> <span style="color:white; padding-top:60px; padding-left:80px">See what "the nation (really) wants to know." (Reminds me of a certain someone..)</span></h3>
-     <!-- LOOP OVER POLLS AND SHOW EACH -->
+      <h3> <span style="color:white; padding-top:60px; padding-left:80px">Find out what "the nation (really) wants to know." (Reminds me of a certain someone..)</span></h3>
      <div class="tpolls" data-sr>
          {{ #each pbyvotes }}
              {{ >poll }}

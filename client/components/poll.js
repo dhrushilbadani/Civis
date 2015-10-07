@@ -32,8 +32,12 @@ Template.poll.events({
         $(event.currentTarget).toggleClass("hvr-grow");
     }
     $('.polls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
-    $('.tpolls').find('[data-id='+pollID+']').fadeTo('fast', 0.65);
-    $(event.currentTarget).parent().prop('disabled', true);
+    $('.tpolls').find('[data-id='+pollID+']').fadeTo('slow', 0.65);
+    $(event.currentTarget).parent().click(false);
+    $(event.currentTarget).siblings('.vote').removeClass("hvr-grow");
+    $(event.currentTarget).siblings('.vote').each(function(i,e) {
+        $(e).click(false);
+    });
     localStorage['votedForPost' + pollID] = 'true';
   }
 
