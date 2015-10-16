@@ -46,7 +46,7 @@ nav {
 .navbar {
   height:120px;
   padding-bottom: 20px;
-  background: linear-gradient( rgba(0, 0, 70, 0.7), rgba(50, 40, 60, 0.7) );
+  background: linear-gradient( rgba(0, 0, 70, 0.9), rgba(50, 40, 70, 0.8) );
   display: inline-block;
 }
 
