@@ -16,7 +16,7 @@ Developed in Meteor.JS with:
 ##Usage:
 <ul>
 <li> Grab the zip file from the pane on the right -> (feel free to git fork+pull the repository too!) </li>
-<li> Type the command "meteor" from within the civis/ directory. </li>
+<li> Run the terminal command "meteor" from within the civis/ directory. Civis should be up and running on your localhost! </li>
 </ul>
 
 ##Screenshots:
