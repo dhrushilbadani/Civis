@@ -2,7 +2,7 @@ var cheerio = Meteor.npmRequire('cheerio');
 SyncedCron.add({
   name: 'Daily Scraper',
   schedule: function(parser) {
-    return parser.text('every 2 mins'); // parser is a later.parse object.
+    return parser.text('every 2 hours'); // parser is a later.parse object.
   },
   job: function() {
     console.log("Beginning scraping....");
@@ -40,21 +40,21 @@ SyncedCron.add({
       {
         question: que2,
         channel: 'TOI',
-        totalvotes: 20,
+        totalvotes: 42,
         choices: [
-          { text: 'Yes', votes: 6},
-          { text: 'No', votes: 6},
-          { text: 'Cannot Say', votes: 8}
+          { text: 'Yes', votes: 14},
+          { text: 'No', votes: 16},
+          { text: 'Cannot Say', votes: 12}
         ]
       },
       {
         question: que3,
         channel: 'Mumbai Mirror',
-        totalvotes: 21,
+        totalvotes: 50,
         choices: [
-          { text: 'Yes', votes: 6},
-          { text: 'No', votes: 6},
-          { text: 'Cannot Say', votes: 8}
+          { text: 'Yes', votes: 20},
+          { text: 'No', votes: 13},
+          { text: 'Cannot Say', votes: 17}
         ]
       }
     ];
