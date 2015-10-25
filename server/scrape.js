@@ -7,23 +7,23 @@ SyncedCron.add({
   job: function() {
     console.log("Beginning scraping....");
     var result = Meteor.http.get('http://www.ndtv.com/polls');
-    console.log(result);
+    //console.log(result);
     var $ = cheerio.load(result.content);
     // var open = $('div.permalink-inner.permalink-tweet-container > div > div > p').text();
     var que1 = $('body > div.newcont > div > div > div.ins_wid990 > div.ins_lftcont640.clr > div.ins_left_rhs > div > div.new_polllisting > ul > li:nth-child(1) > div.npoll_header > a').attr('title');
     console.log(que1);
 
     result = Meteor.http.get('http://timesofindia.indiatimes.com/home/polls');
-    console.log(result);
+    //console.log(result);
     $ = cheerio.load(result.content);
     var que2 = $('#pollform > div > div.polltxt1 > div > font > b').text();
     console.log(que2);
 
-    result = Meteor.http.get('http://www.abplive.in/Polls');
+    result = Meteor.http.get('http://www.mumbaimirror.com');
     console.log(result);
     $ = cheerio.load(result.content);
-    console.log($);
-    var que3 = $('#activePollForm > div.pollQuestion > h3').text();
+    //console.log($);
+    var que3 = $('#pollform > div.poll-title').text().substring(4);
     console.log(que3);
 
     var scraped = [
@@ -49,7 +49,7 @@ SyncedCron.add({
       },
       {
         question: que3,
-        channel: 'ABP Live',
+        channel: 'Mumbai Mirror',
         totalvotes: 21,
         choices: [
           { text: 'Yes', votes: 6},

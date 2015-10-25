@@ -1,12 +1,12 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
-    <p> <span style="color:orange"> CI</span><span style="color:white">V</span><span style="color:green">IS</span></p>
+    <p> <span style="color:orange"><i class="fa fa-angle-right"></i> CI</span><span style="color:white">V</span><span style="color:green">IS</span></p>
     <ul class="nav navbar-nav pull-right">
-      <li class="hvr-grow"><a href="#ask">> Ask</a></li>
-      <li class="hvr-grow"><a href="#latest">> Latest</a></li>
-      <li class="hvr-grow"><a href="#fromTheNews">> From The News</a></li>
-      <li class="hvr-grow"><a href="#trending">> Trending</a></li>
+      <li class="hvr-grow"><a href="#ask"><i class="fa fa-comment-o"></i>  Ask</a></li>
+      <li class="hvr-grow"><a href="#latest"><i class="fa fa-clock-o"></i> Latest</a></li>
+      <li class="hvr-grow"><a href="#fromTheNews"><i class="fa fa-newspaper-o"></i>   From The News</a></li>
+      <li class="hvr-grow"><a href="#trending"><i class="fa fa-bolt"></i>   Trending</a></li>
     </ul>
     <div class="pull-right">
       <!--{{>searchBox}} -->
@@ -27,9 +27,9 @@
 
 
    <div id="latest">
-     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Latest Polls </span></h2>
-     <HR COLOR="white" width:60%>
-      <h3> <span style="color:white; padding-top:60px; padding-left:80px">The latest polls from your fellow Cives (i.e. citizens, for the uninitiated).</span></h3>
+     <h2> <span style="color:orange; padding-top:80px; padding-left:40px"> <span style="color:orange"><i class="fa fa-clock-o"></i></span> Latest Polls </span></h2>
+     <HR COLOR="orange" width:60%>
+      <h3> <span style="color:orange; padding-top:60px; padding-left:80px">The latest polls from your fellow Cives (i.e. citizens, for the uninitiated).</span></h3>
      <div class="polls" data-sr>
         {{ #each polls }}
             {{ >poll }}
@@ -38,9 +38,9 @@
    </div>
 
     <div id="fromTheNews">
-     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> From The News </span></h2>
-     <HR COLOR="white" width:60%>
-      <h3> <span style="color:white; padding-top:60px; padding-left:80px">Their polls, your opinion.</span></h3>
+     <h2> <span style="color:orange; padding-top:80px; padding-left:40px"> <span style="color:orange"><i class="fa fa-newspaper-o"></i></span> From The News </span></h2>
+     <HR COLOR="orange" width:60%>
+      <h3> <span style="color:orange; padding-top:60px; padding-left:80px">Their polls, your opinion.</span></h3>
      <div class="scrapedpolls" data-sr>
          {{ #each scrapedpolls }}
              {{ >scrapedpoll }}
@@ -49,9 +49,9 @@
    </div>
 
    <div id="trending">
-     <h2> <span style="color:white; padding-top:80px; padding-left:40px"> <span style="color:orange">></span> Trending Polls </span></h2>
+     <h2> <span style="color:orange; padding-top:80px; padding-left:40px"> <span style="color:orange"><i class="fa fa-bolt"></i></span> Trending Polls </span></h2>
      <HR COLOR="white" width:60%>
-      <h3> <span style="color:white; padding-top:60px; padding-left:80px">Find out what "the nation (really) wants to know." (Reminds me of a certain someone..)</span></h3>
+      <h3> <span style="color:orange; padding-top:60px; padding-left:80px">Find out what "the nation (really) wants to know."</span></h3>
      <div class="tpolls" data-sr>
          {{ #each pbyvotes }}
              {{ >poll }}
