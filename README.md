@@ -10,6 +10,7 @@ Developed in Meteor.JS with:
 <li>twbs:bootstrap</li>
 <li>underscore.js</li>
 <li>danappelxx:hover.css</li>
+<li>FontAwesome</li>
 </ul>
 
 
