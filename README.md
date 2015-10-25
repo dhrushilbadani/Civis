@@ -20,12 +20,6 @@ Developed in Meteor.JS with:
 </ul>
 
 ##Screenshots:
-![Ask Away](http://i.imgur.com/8lmrpc9.jpg "Ask Away!")
-
-
-![From the News](http://i.imgur.com/ShPkJ2Y.jpg "From The News")
-
-
-![Trending](http://i.imgur.com/4WjfdX1.jpg "Trending Polls")
+![Civis](http://i.imgur.com/FGbL9gI.jpg?1 "Civis")
 
 
