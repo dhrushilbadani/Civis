@@ -6,7 +6,7 @@ Developed in Meteor.JS with:
 <ul>
 <li>meteorhacks:npm to enable usage of Node packages (such as Cheerio, for scraping) via NPM</li>
 <li>http for requests</li>
-<li>percolate:synced-cron to schedule server-side crons for periodic scraping of news websites like NDTV, TOI, ABP etc.</li>
+<li>percolate:synced-cron to schedule server-side crons for periodic scraping of news websites like NDTV, TOI, Mumbai Mirror etc.</li>
 <li>twbs:bootstrap</li>
 <li>underscore.js</li>
 <li>danappelxx:hover.css</li>
