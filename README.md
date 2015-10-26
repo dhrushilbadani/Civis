@@ -14,13 +14,13 @@ Developed in Meteor.JS with:
 </ul>
 
 
-##Usage:
+##See it for yourself:
 <ul>
 <li> Grab the zip file from the pane on the right -> (feel free to git fork+pull the repository too!) </li>
 <li> Run the terminal command "meteor" from within the civis/ directory. Civis should be up and running on your localhost! </li>
 </ul>
 
-##Screenshots:
+##Screenshot:
 ![Civis](http://i.imgur.com/FGbL9gI.jpg?1 "Civis")
 
 
